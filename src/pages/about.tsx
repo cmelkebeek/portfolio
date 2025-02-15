@@ -42,8 +42,6 @@ const About = () => {
         </h1>
         
         <DevTools />
-
-        <GithubPlanning />
       </Container>
     </Container>
   );

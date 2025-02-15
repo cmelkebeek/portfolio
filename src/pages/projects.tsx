@@ -7,7 +7,7 @@ const Projects = () => {
     <Container fluid className="project-section">
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          Mes projets
         </h1>
         <p style={{ color: "white" }}>
           Voici quelques projets que j'ai réalisés ou sur lesquels j'ai travaillé.
@@ -46,10 +46,11 @@ const Projects = () => {
             <ProjectCard
               imgPath={avatar}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="My Portfolio"
+              description="Site web de présentation de mes compétences, mes projets et mes informations de contact.
+              Le site à été réalisé en React.js et TypeScript."
+              ghLink="https://github.com/cmelkebeek/portfolio"
+              demoLink=""              
             />
           </Col>
 
@@ -57,32 +58,12 @@ const Projects = () => {
             <ProjectCard
               imgPath={avatar}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={avatar}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              demoLink=""
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={avatar}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+              title="Site web de vente de vin"
+              description="Site web de vente de vin, possibilité de rechercher un vin, voir le détail du vin, de l'ajouter dans son panier, possibilité de supprimer un vin de son panier.
+              Possibilité de passer commande et de voir les commandes passées.
+              Système de connexion, d'inscription et gestion de compte utilisateur.
+              Le site à été réalisé en ASP.NET."
+              ghLink="https://github.com/Les-vignes-nobles/Vignoble-WEB"
               demoLink=""
             />
           </Col>

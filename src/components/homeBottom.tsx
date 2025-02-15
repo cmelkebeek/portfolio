@@ -49,7 +49,7 @@ function HomeBottom() {
               <ul className="home-about-social-links">
                 <li className="social-icons">
                   <a
-                    href="https://github.com/soumyajit4419"
+                    href="https://github.com/cmelkebeek"
                     target="_blank"
                     rel="noreferrer"
                     className="icon-colour  home-social-icons"
@@ -59,7 +59,7 @@ function HomeBottom() {
                 </li>
                 <li className="social-icons">
                   <a
-                    href="https://www.linkedin.com/in/soumyajit4419/"
+                    href="https://www.linkedin.com/in/camille-melkebeek-69b4491a6/"
                     target="_blank"
                     rel="noreferrer"
                     className="icon-colour  home-social-icons"

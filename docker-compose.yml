@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  react-app:
+    build: .
+    container_name: portfolio-react
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`portfolio.c-mbk.fr`)"
+      - "traefik.http.services.react.loadbalancer.server.port=8080"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
