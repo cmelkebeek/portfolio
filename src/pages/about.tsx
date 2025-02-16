@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import GithubPlanning from "../components/githubPlanning";
 import DevTechs from "../components/devTechs";
 import Aboutcard from "../components/aboutCard";
 import laptopImg from "../assets/logo.png";
