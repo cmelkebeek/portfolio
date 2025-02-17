@@ -43,10 +43,11 @@ function NavBar() {
           onClick={() => {
             updateExpanded(expand ? false : true);
           }}
+          className="custom-toggler"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className="toggler-icon"></span>
+          <span className="toggler-icon"></span>
+          <span className="toggler-icon"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">

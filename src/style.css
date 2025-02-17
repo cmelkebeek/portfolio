@@ -219,14 +219,16 @@ html {
 
 .tech-icons {
   font-size: 4.5em !important;
-  margin: 15px !important;
-  padding: 10px !important;
+  margin: 20px !important; /* Augmenter la marge */
+  padding: 20px !important; /* Augmenter le padding */
   opacity: 0.93 !important;
   border: 1.7px solid rgba(137, 163, 230, 0.637) !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
-  display: table !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   box-shadow: 4px 5px 4px 3px rgba(15, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
@@ -234,7 +236,8 @@ html {
 
 @media (max-width: 767px) {
   .tech-icons {
-    margin: 10px !important;
+    margin: 15px !important; /* Ajuster la marge pour les petits écrans */
+    padding: 15px !important; /* Ajuster le padding pour les petits écrans */
   }
 }
 
@@ -383,4 +386,23 @@ html {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+}
+
+.custom-toggler {
+  border: none;
+  background: transparent;
+  padding: 0.25rem 0.5rem;
+}
+
+.custom-toggler .toggler-icon {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background-color: #000; /* Couleur de l'icône du burger */
+  transition: all 0.3s;
+}
+
+.custom-toggler .toggler-icon:hover {
+  background-color: #555; /* Couleur de l'icône du burger au survol */
 }
