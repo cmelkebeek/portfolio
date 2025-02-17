@@ -14,12 +14,14 @@ function HomeBottom() {
                 PETITE INTRODUCTION 
               </h1>
               <p className="home-about-body">
-                J'ai découvert le développement lorsque j'étais en fin collège et j'en suis tombé amoureux. 
+                J'ai découvert le développement lorsque j'étais en fin de collège et une passion est née. 
                 <br />
                 <br />Je développe souvent en 
                 <i>
-                  <b className="purple"> C#, Javascript et TypeScript. </b>
+                  <b className="purple"> C#.</b>
                 </i>
+                <br />
+                Je m'interesse également à d'autres langages tels que le <i><b className="purple">JavaScript</b></i> et le <i><b className="purple">TypeScript.</b></i>
                 <br />
                 <br />
                 Mes centres d'intérêt sont principalement
@@ -45,7 +47,7 @@ function HomeBottom() {
           </Row>
           <Row>
             <Col md={12} className="home-about-social">
-              <h1>Vous pouvez me trouver sûr</h1>
+              <h1>Mes réseaux</h1>
               <ul className="home-about-social-links">
                 <li className="social-icons">
                   <a

@@ -18,7 +18,7 @@ function HomeTop() {
   
                 <h1 className="heading-name">
                   Je me prénomme
-                  <strong className="main-name"> Camille Melkebeek</strong>
+                  <strong className="purple"> Camille Melkebeek</strong>
                 </h1>
   
                 <div style={{ padding: 50, textAlign: "left" }}>

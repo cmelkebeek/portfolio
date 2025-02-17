@@ -18,7 +18,7 @@ const About = () => {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Qui <strong className="purple">je </strong> suis ?
+              Qui <strong className="purple">suis-je </strong> ?
             </h1>
             <Aboutcard />
           </Col>
