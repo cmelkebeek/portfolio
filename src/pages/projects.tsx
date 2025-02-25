@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/projectCard";
 import avatar from "../assets/logo.png";
+import meteoapp from "../assets/meteoapp.png";
 
 const Projects = () => {
   return (
@@ -64,6 +65,18 @@ const Projects = () => {
               Système de connexion, d'inscription et gestion de compte utilisateur.
               Le site à été réalisé en ASP.NET."
               ghLink="https://github.com/Les-vignes-nobles/Vignoble-WEB"
+              demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={meteoapp}
+              isBlog={false}
+              title="Application de gestion de température"
+              description="Application web permettant d'avoir un suivi de la température de son logement, 
+              pour chaque pièce et une alerte si la température est trop froide ou chaude."
+              ghLink="https://github.com/orgs/MeteoApp/repositories"
               demoLink=""
             />
           </Col>
