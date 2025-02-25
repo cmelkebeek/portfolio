@@ -2,6 +2,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/projectCard";
 import avatar from "../assets/logo.png";
 import meteoapp from "../assets/meteoapp.png";
+import moviemanager from "../assets/moviemanager.png";
+import eatadvisor from "../assets/EatAdvisor.jpeg";
 
 const Projects = () => {
   return (
@@ -16,7 +18,7 @@ const Projects = () => {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={avatar}
+              imgPath={moviemanager}
               isBlog={false}
               title="MovieManager"
               description="Site web de gestions de films, possibilité de rechercher un film, 
@@ -30,7 +32,7 @@ const Projects = () => {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={avatar}
+              imgPath={eatadvisor}
               isBlog={false}
               title="EatAdvisor"
               description="Application mobile de gestion de repas, 
