@@ -48,6 +48,6 @@ Pour ajouter un projet ou une compétence, il suffit de modifier les fichiers de
 À chaque push sur `main`, la GitHub Action [`docker-build.yml`](.github/workflows/docker-build.yml) :
 
 1. vérifie le lint et le build ;
-2. construit l'image Docker et la publie sur Docker Hub (`camille363/myportfolio`), avec le tag `latest` et le SHA du commit.
+2. construit l'image Docker et la publie sur mon registre privé (`registry.c-mbk.fr/portfolio`), avec le tag `latest` et le SHA du commit.
 
 Sur les pull requests, seule l'étape de vérification est exécutée.

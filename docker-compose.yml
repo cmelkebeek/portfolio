@@ -1,9 +1,9 @@
 services:
   react-app:
-    build: .
+    # Image publiée par la GitHub Action à chaque push sur main
+    image: registry.c-mbk.fr/portfolio:latest
+    pull_policy: always
     container_name: portfolio-react
+    restart: unless-stopped
     ports:
       - 80:80
-
-
-    
