@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# Portfolio – Camille Melkebeek
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mon portfolio personnel : présentation, compétences, projets et CV.
 
-Currently, two official plugins are available:
+🌐 **En ligne :** [portfolio.c-mbk.fr](https://portfolio.c-mbk.fr)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## Expanding the ESLint configuration
+- [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/), avec [Vite](https://vite.dev/)
+- [Tailwind CSS 4](https://tailwindcss.com/) pour le style, polices Inter et Space Grotesk (auto-hébergées via Fontsource)
+- [React Router](https://reactrouter.com/) pour la navigation
+- [react-pdf](https://github.com/wojtekmaj/react-pdf) pour l'affichage du CV
+- Docker + nginx pour le déploiement, derrière Traefik
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Lancer le projet en local
 
-- Configure the top-level `parserOptions` property like this:
+Prérequis : Node.js 22.22+ (24 recommandé)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
+npm run dev       # serveur de développement sur http://localhost:5173
+npm run lint      # vérification ESLint
+npm run build     # build de production dans dist/
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Avec Docker :
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+docker build -t portfolio .
+docker run -p 8080:80 portfolio   # http://localhost:8080
 ```
+
+## Structure
+
+```
+src/
+├── assets/       # images et CV (PDF)
+├── components/   # composants réutilisables (navbar, cartes, liens sociaux…)
+├── data/         # contenu du site : projets, compétences, liens de contact
+├── pages/        # une page par route (accueil, à propos, projets, CV, 404)
+└── style.css
+```
+
+Pour ajouter un projet ou une compétence, il suffit de modifier les fichiers de `src/data/`.
+
+## Déploiement
+
+À chaque push sur `main`, la GitHub Action [`docker-build.yml`](.github/workflows/docker-build.yml) :
+
+1. vérifie le lint et le build ;
+2. construit l'image Docker et la publie sur Docker Hub (`camille363/myportfolio`), avec le tag `latest` et le SHA du commit.
+
+Sur les pull requests, seule l'étape de vérification est exécutée.

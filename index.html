@@ -2,9 +2,67 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon portfolio</title>
+    <title>Camille Melkebeek – Développeur full stack</title>
+    <meta
+      name="description"
+      content="Portfolio de Camille Melkebeek, développeur full stack .NET et React en alternance près de Rouen : compétences, projets (microservices, Kubernetes, CI/CD) et CV."
+    />
+    <meta name="author" content="Camille Melkebeek" />
+    <meta name="theme-color" content="#fafaf9" />
+    <link rel="canonical" href="https://portfolio.c-mbk.fr/" />
+
+    <!-- Aperçu lors d'un partage (LinkedIn, Slack, Discord…) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Camille Melkebeek" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://portfolio.c-mbk.fr/" />
+    <meta property="og:title" content="Camille Melkebeek – Développeur full stack" />
+    <meta
+      property="og:description"
+      content="Développeur full stack (C#, .NET, React, TypeScript). Découvrez mes compétences, mes projets et mon CV."
+    />
+    <meta property="og:image" content="https://portfolio.c-mbk.fr/logo.png" />
+    <meta property="og:image:alt" content="Logo de Camille Melkebeek" />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Données structurées : aident Google à relier le site, GitHub et LinkedIn à la même personne -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Camille Melkebeek",
+        "url": "https://portfolio.c-mbk.fr/",
+        "image": "https://portfolio.c-mbk.fr/logo.png",
+        "jobTitle": "Développeur full stack",
+        "worksFor": { "@type": "Organization", "name": "Blue Soft" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "CESI Rouen" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Rouen", "addressCountry": "FR" },
+        "knowsAbout": [".NET", "C#", "ASP.NET", "Blazor", "React", "TypeScript", "Docker", "Kubernetes", "CI/CD", "Architecture logicielle"],
+        "sameAs": [
+          "https://github.com/cmelkebeek",
+          "https://www.linkedin.com/in/camille-melkebeek-69b4491a6/"
+        ]
+      }
+    </script>
+
+    <!-- Applique le thème avant le premier affichage pour éviter un flash de la mauvaise couleur -->
+    <script>
+      (function () {
+        var theme;
+        try { theme = localStorage.getItem("theme"); } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+          document.querySelector('meta[name="theme-color"]').setAttribute("content", "#0f0f12");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

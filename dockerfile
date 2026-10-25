@@ -1,11 +1,12 @@
-# Étape 1 : Builder l’application
-FROM node:18 AS builder
+# Étape 1 : builder l'application
+FROM node:24-alpine AS builder
 WORKDIR /src
 COPY package.json package-lock.json ./
-RUN npm install --force
+RUN npm ci
 COPY . .
 RUN npm run build
 
+# Étape 2 : servir les fichiers statiques avec nginx
 FROM nginx:alpine
 COPY --from=builder /src/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
